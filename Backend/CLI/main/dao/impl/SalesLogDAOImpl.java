@@ -10,10 +10,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
 public class SalesLogDAOImpl implements SalesLogDAO {
     private static final Connection connection = SQLiteConnection.getInstance().getConnection();
-
 
     public SalesLogDAOImpl() {
         try {
@@ -38,8 +36,8 @@ public class SalesLogDAOImpl implements SalesLogDAO {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
 
-            // Create a date formatter
-            SimpleDateFormat formatter = new SimpleDateFormat("ss:mm:HH - dd/MM/yyyy");
+            // Create a date formatter with the correct pattern
+            SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss - dd/MM/yyyy");
 
             // Get the current date and time
             String formattedDateTime = formatter.format(new Date());
