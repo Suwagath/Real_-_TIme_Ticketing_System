@@ -1,0 +1,30 @@
+/* Circle Styles */
+.circle {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  border-radius: 50%; /* Makes the div a circle */
+  /*background-color: #ff0000; !* Initial background color *!*/
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  margin: 0 auto; /* Center the circle in the container */
+}
+
+/* Responsive Circle */
+@media (max-width: 600px) {
+  .circle {
+    width: 80px; /* Smaller circle on small screens */
+    height: 80px;
+  }
+}
+
+.fm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bx {
+  width: 500px;
+}

@@ -1,0 +1,97 @@
+<div class="container text-center mt-5">
+
+  <div class="alert alert-success" role="alert" *ngIf="showAlertSuccess">
+    {{ alertMgSuccess }}
+  </div>
+
+  <div class="alert alert-danger" role="alert" *ngIf="showAlertDanger">
+    {{ alertMgDanger }}
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <!-- Circle Section -->
+      <div style="background-color:{{ cliStatusColor }}" class="circle mx-auto mb-5">
+        <span class="text-white font-weight-bold">{{ cliStatus }}</span>
+      </div>
+    </div>
+
+<!--    <div class="col">-->
+<!--      <div class="row">-->
+<!--        <div class="col"><button class="btn btn-primary" (click)="startSystem()" >Start System</button></div>-->
+<!--        <div class="col"><button class="btn btn-primary" (click)="stopSystem()">Stop System</button></div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="col">
+      <!-- Circle Section -->
+      <div style="background-color:{{ systemStatusColor }}" class="circle mx-auto mb-5">
+        <span class="text-white font-weight-bold">{{ systemStatus }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Status Row -->
+  <div class="row mb-4">
+    <div class="col">
+      <h4>Total Tickets</h4>
+      <h4>{{ totalTickets }}</h4>
+    </div>
+    <div class="col">
+      <h4>Ticket Release Rate</h4>
+      <h4>{{ ticketReleaseRate }}</h4>
+    </div>
+    <div class="col">
+      <h4>Customer Retrieval Rate</h4>
+      <h4>{{ customerRetrievalRate }}</h4>
+    </div>
+    <div class="col">
+      <h4>Max Ticket Capacity</h4>
+      <h4>{{ maxTicketCapacity }}</h4>
+    </div>
+<!--    <div class="col">-->
+<!--      <h4>Status 5</h4>-->
+<!--      <h4>{{  }}</h4>-->
+<!--    </div>-->
+  </div>
+
+  <!-- Form Section -->
+  <form class="status-form fm" [formGroup]="form" (ngSubmit)="updateData()">
+    <div class="form-group bx">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Total Tickets</span>
+        <input formControlName="totalTickets" type="text" class="form-control" aria-label="Sizing example input"
+               aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+    <div class="form-group bx">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Ticket Release Rate</span>
+        <input formControlName="ticketReleaseRate" type="text" class="form-control" aria-label="Sizing example input"
+               aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+    <div class="form-group bx">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Customer Retrieval Rate</span>
+        <input formControlName="customerRetrievalRate" type="text" class="form-control" aria-label="Sizing example input"
+               aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+    <div class="form-group bx">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Max Ticket Capacity</span>
+        <input formControlName="maxTicketCapacity" type="text" class="form-control" aria-label="Sizing example input"
+               aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+<!--    <div class="form-group">-->
+<!--      <div class="input-group mb-3">-->
+<!--        <span class="input-group-text">System status</span>-->
+<!--        <input type="text" class="form-control" aria-label="Sizing example input"-->
+<!--               aria-describedby="inputGroup-sizing-default">-->
+<!--      </div>-->
+<!--    </div>-->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

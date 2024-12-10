@@ -1,0 +1,48 @@
+/Backend/CLI/.idea/
+/Backend/CLI/out/
+/Backend/CLI/CLI.iml
+
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/Frontend/dist
+/Frontend/tmp
+/Frontend/out-tsc
+/Frontend/bazel-out
+
+# Node
+/Frontend/node_modules
+/Frontendnpm-debug.log
+/Frontendyarn-error.log
+
+# IDEs and editors
+/Frontend.idea/
+/Frontend.project
+/Frontend.classpath
+/Frontend.c9/
+/Frontend*.launch
+/Frontend.settings/
+/Frontend*.sublime-workspace
+
+# Visual Studio Code
+/Frontend.vscode/*
+/Frontend!.vscode/settings.json
+/Frontend!.vscode/tasks.json
+/Frontend!.vscode/launch.json
+/Frontend!.vscode/extensions.json
+/Frontend.history/*
+
+# Miscellaneous
+/Frontend/.angular/cache
+/Frontend.sass-cache/
+/Frontend/connect.lock
+/Frontend/coverage
+/Frontend/libpeerconnection.log
+/Frontendtestem.log
+/Frontend/typings
+
+# System files
+/Frontend.DS_Store
+/FrontendThumbs.db
+
+

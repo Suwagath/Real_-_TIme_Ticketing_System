@@ -1,0 +1,31 @@
+<div class="container text-center mt-3">
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Sale ID</th>
+        <th scope="col">Date and Time</th>
+        <th scope="col">Log</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let tempData of list">
+        <td>{{ tempData.id }}</td>
+        <td>{{ tempData.timeAndDate }}</td>
+        <td>{{ tempData.log }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+<!--  style="border: 2px solid; padding: 10px;"-->
+  <div class="row justify-content-md-center" style="padding-bottom: 50px; padding-top: 50px;">
+    <div class="col col-lg-2">
+      <button (click)="previous()" [disabled]="previousBtn" type="button" class="btn btn-info">Previous</button>
+    </div>
+    <div class="col col-lg-2">
+      <button (click)="next()" [disabled]="nextBtn" type="button" class="btn btn-info">Next</button>
+    </div>
+  </div>
+
+</div>
