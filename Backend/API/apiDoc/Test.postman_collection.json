@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "6b1e7faf-4398-456c-8d9d-15bc994a09c2",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23329993"
+	},
+	"item": [
+		{
+			"name": "configure system parameters",
+			"item": [
+				{
+					"name": "system status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/configuresystemparameters/status"
+					},
+					"response": []
+				},
+				{
+					"name": "update system configure",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"total_tickets\": 50,\r\n    \"ticket_release_rate\": 60,\r\n    \"customer_retrieval_rate\": 60,\r\n    \"max_ticket_capacity\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/configuresystemparameters/update"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "configure system",
+			"item": [
+				{
+					"name": "system status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/configuresystem/status"
+					},
+					"response": []
+				},
+				{
+					"name": "update system status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"system_status\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/configuresystem/update"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sales log",
+			"item": [
+				{
+					"name": "sales log with text",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/saleslog/?search_text=&page=0&size=25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"saleslog",
+								""
+							],
+							"query": [
+								{
+									"key": "search_text",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sales log without text",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/saleslog/?page=0&size=25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"saleslog",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
