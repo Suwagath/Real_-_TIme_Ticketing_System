@@ -28,7 +28,7 @@ export class SystemconfigComponent implements OnInit {
   protected alertMgDanger: string = '';
   protected systemStatusColor: string = '';
   protected cliStatusColor: string = '';
-  protected statusColorForStop: string = '#d50808';
+  protected statusColorForStop: string = '#ada1a1';
   protected statusColorForRun: string = '#33a807';
 
   constructor(private http: HttpClient) { }
