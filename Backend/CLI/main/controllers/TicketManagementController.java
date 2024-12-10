@@ -215,7 +215,7 @@ public class TicketManagementController {
                 "\n===== Show Status =====\n" +
                 (configDAO.findConfigValue("system_status") == 1
                 ? "System is up and running\n"
-                : "System is stop\n") +
+                : "System is not running\n") +
                 "============================================"
             );
 
@@ -241,7 +241,7 @@ public class TicketManagementController {
         try {
             configDAO.updateConfigValue("system_status", 0);
             stopSystem();
-            System.out.println("System is stop.");
+            System.out.println("System has been stopped.");
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -253,7 +253,7 @@ public class TicketManagementController {
         try {
             configDAO.updateConfigValue("system_status", 1);
             restartSystem();
-            System.out.println("System is restart.");
+            System.out.println("System has been restarted.");
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
