@@ -56,7 +56,7 @@ public class SalesLogDAOImpl implements SalesLogDAO {
     @Override
     public List<SalesLog> getAllLogs() {
         List<SalesLog> salesLog = new ArrayList<>();
-        String query = "SELECT * FROM sales_log;";
+        String query = "SELECT * FROM sales_log ORDER BY sale_id DESC;";
 
         try {
             Statement statement = connection.createStatement();
