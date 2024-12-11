@@ -7,7 +7,7 @@ import main.models.SalesLog;
 public class SalesLogController {
     // Sales Log
     public void salesLog() {
-        System.out.println("\n===== Configure System Parameters =====");
+        System.out.println("\n===== Sales Log =====");
         System.out.println("+-------------------------+-----------------------------------------------------------------+");
         System.out.println("| Log Time and Date       | Log                                                             |");
         System.out.println("+-------------------------+-----------------------------------------------------------------+");
