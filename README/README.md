@@ -11,18 +11,16 @@ The system is designed to manage ticket sales in real time, simulating how ticke
 **CLI Functions**:
 - **System Configuration**: Set up initial values like total ticket count and how quickly tickets are released.
 - **Manage Vendors**: Add or remove vendors who will sell tickets.
-- **Manage Ticket Types**: Set up types of tickets (like VIP or General Admission) with unique prices.
 - **Monitor Real-Time Status**: View the current ticket inventory by vendor and type to ensure everything is working correctly.
 - **Sales Log**: Look at past sales to see when tickets were purchased and by whom.
 
 ### Frontend (User Interface)
-**Purpose**: The frontend is a visual interface for customers and admins. Customers can buy tickets, and admins can monitor sales and ticket status.
+**Purpose**: The frontend is a visual interface for admins. Admins can monitor sales and ticket status.
 
 **Frontend Functions**:
 - **Display Ticket Availability**: Show customers which tickets are available in real time.
 - **Control Panel for Admins**: Start/stop ticket release operations and adjust system settings.
 - **Real-Time Notifications**: Display messages about ticket status, sales updates, and any errors (e.g., if no tickets are available).
-- **Purchase Tickets**: Allows customers to buy tickets through a graphical interface instead of the CLI.
 
 ### API (Backend Logic and Database Interaction)
 **Purpose**: The API, built with Spring Boot, is the brain of the system. It controls all operations related to ticket handling, connects the frontend and CLI to the database, and manages real-time data.
@@ -44,8 +42,8 @@ The system is designed to manage ticket sales in real time, simulating how ticke
 Here’s how each part interacts in a typical workflow:
 
 ### System Setup (CLI and API)
-- The CLI is used by an admin to set up vendors, ticket types, and general system settings. This information is saved in the Database (through API requests).
-- For example, an admin might add a vendor with a specific ticket type (VIP or General Admission) and set a release rate.
+- The CLI is used by an admin to set up vendors, and general system settings. This information is saved in the Database (through API requests).
+- For example, an admin might add a vendor with a specific release rate.
 
 ### Ticket Handling (API and Database)
 - Once vendors and ticket types are set up, the API starts handling tickets in real time:
@@ -67,10 +65,10 @@ Let’s say the system is up and running. Here’s how a user would experience i
 
 ### Admin Setup (CLI)
 - The admin opens the CLI to configure vendors and ticket types.
-- They add two vendors (Vendor A and Vendor B) and assign ticket types to each (e.g., VIP tickets for Vendor A, General Admission for Vendor B).
+- They add two vendors.
 - This setup information is stored in the Database.
 
-### Customer Purchase (Frontend)
+### Customer Purchase (Frontend) - Simulation
 - A customer visits the frontend to purchase a ticket.
 - They see available ticket types and click to buy a VIP ticket.
 - The frontend sends a purchase request to the API.
@@ -78,7 +76,7 @@ Let’s say the system is up and running. Here’s how a user would experience i
 
 ### Real-Time Status Check (CLI/Frontend)
 - The admin can check the real-time status of ticket availability via the CLI.
-- The customer on the frontend sees updated availability immediately after the purchase.
+- The admin on the frontend sees updated availability immediately after the purchase.
 
 ## 5. Key Relationships
 - **Vendors and Tickets**: Each vendor has specific ticket types, managed by linking vendor_id in the Tickets Table.
